@@ -107,7 +107,7 @@ final class AR_Client_IP_Manager {
 	 */
 	private static function set_user_ip() {
 
-		self::$user_ip = '1.1.1.1';
+		self::$user_ip = $_SERVER[ 'REMOTE_ADDR' ];
 
 	}
 
