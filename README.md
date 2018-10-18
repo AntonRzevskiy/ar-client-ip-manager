@@ -5,7 +5,9 @@
 
 function sxgeo_api( $ip ) {
 
-	return json_decode( file_get_contents( 'http://ru.sxgeo.city/json/' ), true );
+	$ip = $_SERVER[ 'REMOTE_ADDR' ];
+
+	return json_decode( file_get_contents( 'http://ru.sxgeo.city/json/' . $ip . '/' ), true );
 }
 
 function client_ip_manager_settings() {
